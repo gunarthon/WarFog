@@ -41,6 +41,10 @@ Draw::Draw(sf::RenderWindow &Window)
     howto << " - Ctrl+V to paste" << std::endl;
     howto << " - Page Up to move to front" << std::endl;
     howto << " - Page Down to move to back" << std::endl;
+    howto << " - left mouse button drag to select multiple parts" << std::endl;
+    howto << " - middle mouse button drag to move camera" << std::endl;
+    howto << " - right mouse button drag to rotate selected parts" << std::endl;
+
 
     howto << std::endl;
     howto << " - F5 to save design" << std::endl;

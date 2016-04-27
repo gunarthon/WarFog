@@ -9,8 +9,8 @@ int main()
 {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
-    //sf::RenderWindow window(sf::VideoMode::getFullscreenModes()[0], "Gambearra", sf::Style::Fullscreen, settings);
-    sf::RenderWindow window(sf::VideoMode(800,800), "Gambearra", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode::getFullscreenModes()[0], "Gambearra", sf::Style::Fullscreen, settings);
+    //sf::RenderWindow window(sf::VideoMode(800,800), "Gambearra", sf::Style::Default, settings);
     window.setKeyRepeatEnabled(false);
 
     ControllerGame *contGame = new ControllerGame(window);

@@ -21,7 +21,6 @@ class Thruster : public JointPart
         void Update(b2World *world, InputManager *input);
         void Move(sf::Vector2f val);
         void RotateAround(sf::Vector2f center, Num curAngle);
-        //PartIdList *GetAttachedParts(PartIdList *partList = NULL);
         void PrepareForResizing();
         void Draw(sf::RenderWindow *window, Camera *camera, bool drawStatic,
                   bool showJoints, bool showOutlines,

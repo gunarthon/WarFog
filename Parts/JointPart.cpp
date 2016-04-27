@@ -76,11 +76,12 @@ void JointPart::Move(sf::Vector2f val)
 
 void JointPart::RotateAround(sf::Vector2f center, Num curAngle)
 {
-    //Move function now is relative
-    /*static Utils utils;
-    Num dist = utils.GetLength(sf::Vector2f(anchorX, anchorY) - sf::Vector2f(xVal, yVal));
-    Num absoluteAngle = rotateAngle + curAngle;
-    Move(xVal + dist * std::cos(absoluteAngle), yVal + dist * std::sin(absoluteAngle));*/
+    Move(-center);
+    Num sin = std::sin(utils.DegToRad(curAngle));
+    Num cos = std::cos(utils.DegToRad(curAngle));
+    sf::Vector2f delta = sf::Vector2f(anchor.x * cos - anchor.y * sin - anchor.x,
+                                       anchor.x * sin + anchor.y * cos - anchor.y);
+    Move(delta + center);
 }
 
 void JointPart::GetAttachedParts(Group *group, bool recursive)
@@ -90,18 +91,19 @@ void JointPart::GetAttachedParts(Group *group, bool recursive)
 
 	group->push_back(id);
 
-	if(part1 && part2)
+	if(part1)
     {
         if(recursive)
-        {
             part1->GetAttachedParts(group, recursive);
-            part2->GetAttachedParts(group, recursive);
-        }
         else
-        {
             group->push_back(part1->id);
+    }
+	if(part2)
+    {
+        if(recursive)
+            part2->GetAttachedParts(group, recursive);
+        else
             group->push_back(part2->id);
-        }
     }
 }
 void JointPart::Connect(ShapePart *p1, ShapePart *p2)

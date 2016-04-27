@@ -328,12 +328,19 @@ void PartList::MoveToBack(Group *group)
 
 void PartList::Rotate(Group *group, Num angle, sf::Vector2f center)
 {
+    temp.clear();
     for(unsigned i = 0; i < group->size(); i++)
     {
         Part *part = At(group->at(i));
+        part->GetAttachedParts(&temp);
+    }
+    for(unsigned i = 0; i < temp.size(); i++)
+    {
+        Part *part = At(temp.at(i));
         if(part)
             part->RotateAround(center, angle);
     }
+    temp.clear();
 }
 
 void PartList::SortShapesFirst(Group *g)

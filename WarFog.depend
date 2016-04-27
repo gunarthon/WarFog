@@ -936,7 +936,7 @@
 1458221827 source:c:\users\edu12_000\dropbox\shared na\sfml\warfog\src\titlescreen.cpp
 	"TitleScreen.h"
 
-1461662807 source:d:\dropbox\shared na\sfml\warfog\main.cpp
+1461791513 source:d:\dropbox\shared na\sfml\warfog\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	"ControllerGame.h"
@@ -2064,7 +2064,7 @@
 	"PartList.h"
 	"InputManager.h"
 
-1461775645 source:d:\dropbox\shared na\sfml\warfog\parts\jointpart.cpp
+1461789047 source:d:\dropbox\shared na\sfml\warfog\parts\jointpart.cpp
 	"JointPart.h"
 	"ShapePart.h"
 
@@ -2078,25 +2078,25 @@
 	"Thruster.h"
 	"Color.h"
 
-1461775645 d:\dropbox\shared na\sfml\warfog\parts\thruster.h
+1461789047 d:\dropbox\shared na\sfml\warfog\parts\thruster.h
 	"JointPart.h"
 
-1461776736 source:d:\dropbox\shared na\sfml\warfog\parts\shapepart.cpp
+1461789245 source:d:\dropbox\shared na\sfml\warfog\parts\shapepart.cpp
 	"ShapePart.h"
 
-1461775645 source:d:\dropbox\shared na\sfml\warfog\parts\thruster.cpp
+1461789047 source:d:\dropbox\shared na\sfml\warfog\parts\thruster.cpp
 	"Thruster.h"
 	"ShapePart.h"
 	"Camera.h"
 
-1461749063 source:d:\dropbox\shared na\sfml\warfog\parts\rectangle.cpp
+1461780195 source:d:\dropbox\shared na\sfml\warfog\parts\rectangle.cpp
 	"Rectangle.h"
 	"Camera.h"
 
 1461749063 d:\dropbox\shared na\sfml\warfog\parts\rectangle.h
 	"ShapePart.h"
 
-1461683317 source:d:\dropbox\shared na\sfml\warfog\game\draw.cpp
+1461789549 source:d:\dropbox\shared na\sfml\warfog\game\draw.cpp
 	"Draw.h"
 
 1461679843 d:\dropbox\shared na\sfml\warfog\game\draw.h
@@ -2123,10 +2123,10 @@
 	"GUI.h"
 	"InterfaceManager.h"
 
-1461777063 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
+1461791390 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
 	"ControllerGame.h"
 
-1461775654 d:\dropbox\shared na\sfml\warfog\game\controllergame.h
+1461787929 d:\dropbox\shared na\sfml\warfog\game\controllergame.h
 	"Draw.h"
 	"ShapePart.h"
 	"Rectangle.h"
@@ -2783,7 +2783,7 @@
 1460592299 source:d:\dropbox\shared na\sfml\warfog\src\color.cpp
 	"Color.h"
 
-1461775764 source:d:\dropbox\shared na\sfml\warfog\parts\partlist.cpp
+1461789245 source:d:\dropbox\shared na\sfml\warfog\parts\partlist.cpp
 	"PartList.h"
 	"Part.h"
 	"Rectangle.h"
@@ -2859,7 +2859,7 @@
 1461658851 d:\dropbox\shared na\sfml\warfog\include\developergui.h
 	"GUI.h"
 
-1461659114 source:d:\dropbox\shared na\sfml\warfog\src\developergui.cpp
+1461791544 source:d:\dropbox\shared na\sfml\warfog\src\developergui.cpp
 	"DeveloperGUI.h"
 
 1461676582 source:d:\dropbox\shared na\sfml\warfog\parts\box.cpp

@@ -32,7 +32,7 @@ ShapePart::ShapePart(Num x, Num y) : Part()
     proprieties.list.push_back(new Propriety("outline", BOOL, 1, true, &outline));
     //proprieties.list.push_back(new Propriety("terrain", BOOL, 0, &terrain));
     //proprieties.list.push_back(new Propriety("undragable", BOOL, 0, &undragable));
-    proprieties.list.push_back(new Propriety("angle", SLIDER, 1, true, NULL, &angle, NULL, -360, 360));
+    proprieties.list.push_back(new Propriety("angle", SLIDER, 1, false, NULL, &angle, NULL, -360, 360));
     proprieties.list.push_back(new Propriety("color.r", SLIDER, 1, true, NULL, &color.r, NULL, 0, 255));
     proprieties.list.push_back(new Propriety("color.g", SLIDER, 1, true, NULL, &color.g, NULL, 0, 255));
     proprieties.list.push_back(new Propriety("color.b", SLIDER, 1, true, NULL, &color.b, NULL, 0, 255));
@@ -125,10 +125,15 @@ void ShapePart::Move(sf::Vector2f val)
 
 void ShapePart::RotateAround(sf::Vector2f center, Num curAngle)
 {
-    Num dist = utils.GetLength(sf::Vector2f(centerX, centerY) - center);
     angle += curAngle;
     angle = utils.NormalizeAngle(angle);
-    Move(sf::Vector2f(dist * std::cos(utils.DegToRad(curAngle)), dist * std::sin(utils.DegToRad(curAngle))));
+
+    Move(-center);
+    Num sin = std::sin(utils.DegToRad(curAngle));
+    Num cos = std::cos(utils.DegToRad(curAngle));
+    sf::Vector2f delta = sf::Vector2f(centerX * cos - centerY * sin - centerX,
+                                       centerX * sin + centerY * cos - centerY);
+    Move(delta + center);
 }
 
 bool ShapePart::HeavierThan(ShapePart *other)

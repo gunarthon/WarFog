@@ -83,6 +83,8 @@ class ControllerGame : public Controller
         PositionList mouseClicks;
         sf::Vector2f lastMousePos;
 
+        sf::Vector2f rotateCenter;
+
         sf::Vector2f cameraPos;
         Num cameraScale;
 

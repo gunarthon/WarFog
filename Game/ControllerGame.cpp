@@ -46,7 +46,9 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
     interface.list.push_back(devInterface);
 
     interface.Show(toolsInterface);
-    interface.Show(devInterface);
+    #ifdef DEBUG
+        interface.Show(devInterface);
+    #endif // DEBUG
     interface.Show(mainMenuInterface);
 
     ChangeAction(DEFAULT_ACTION);
@@ -120,6 +122,7 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
 					p->color = Color(81, 122, 35, 50);
 
     allParts.Add(p);
+    LoadDesign("tutorial0");
 }
 
 ControllerGame::~ControllerGame()
@@ -277,6 +280,8 @@ bool ControllerGame::MouseDown(sf::Mouse::Button button, Num x, Num y)
 {
     if(Controller::MouseDown(button, x, y))
         return true;
+    if(button == sf::Mouse::Right)
+        rotateCenter = camera->ToWorldPos(sf::Vector2f(x,y));
     if(button != sf::Mouse::Left)
         return false;
 
@@ -498,10 +503,15 @@ bool ControllerGame::MouseMove(Num x, Num y)
 
     if(!simStarted)
     {
+
         UpdateTempParts();
         if(currAction == DEFAULT_ACTION)
         {
-            if(mouseDown)
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Right))
+            {
+                allParts.Rotate(&allParts.selected, x - lastMousePos.x, rotateCenter);
+            }
+            else if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
                 bool dragScreen = true;
                 Group attached;

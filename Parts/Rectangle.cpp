@@ -68,7 +68,7 @@ void Rectangle::GetVertices(VectorList *verts)
     for (int i = 0; i < 4; i++)
     {
         Num vertAngle = std::atan2((verts->at(i)).y - centerY, (verts->at(i)).x - centerX);
-        vertAngle = utils.NormalizeAngle(utils.DegToRad(angle) + vertAngle);
+        vertAngle = utils.NormalizeAngle(utils.DegToRad(angle) + vertAngle, true);
         verts->at(i).x = centerX + dist * std::cos((vertAngle));
         verts->at(i).y = centerY + dist * std::sin((vertAngle));
     }

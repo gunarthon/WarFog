@@ -94,17 +94,10 @@ void Thruster::Move(sf::Vector2f val)
 
 void Thruster::RotateAround(sf::Vector2f center, Num curAngle)
 {
-    /*var dist:Number = Util.GetDist(centerX, centerY, xVal, yVal);
-			var absoluteAngle:Number = rotateAngle + curAngle;
-			Move(xVal + dist * Math.cos(absoluteAngle), yVal + dist * Math.sin(absoluteAngle));
-			angle = curAngle + rotateOrientation;*/
+    angle += curAngle;
+    angle = utils.NormalizeAngle(angle);
+    JointPart::RotateAround(center, curAngle);
 }
-
-/*PartList *Thruster::GetAttachedParts(PartList *partList)
-{
-
-}*/
-
 
 void Thruster::PrepareForResizing()
 {
