@@ -1,0 +1,13 @@
+Start=[Title]
+
+Load=[Position][Axis][Animation][Align]
+[100,100][2][Fade][None]
+
+Load=[Item]
+[New Game]
+[Load Game]
+[Options]
+[Credits]
+[Exit]
+
+End=[Title]

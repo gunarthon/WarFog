@@ -1,0 +1,65 @@
+DES_version_1.0.0.0
+Rectangle
+id 520 sandbox 0 editable 1 static 0 collide 0 cameraFocus 0 outline 1 angle 0 color.r 245.9 color.g 189 color.b 49.175 color.a 255 density 15 centerX -10.8841 centerY 4.96858 x -11.7267 y 4.91858 width 1.68508 height 0.1
+Rectangle
+id 515 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 229.5 color.g 176.25 color.b 0 color.a 255 density 15 centerX -12.0623 centerY 4.19799 x -12.8726 y 3.30752 width 1.62049 height 1.78094
+Rectangle
+id 507 sandbox 0 editable 1 static 0 collide 1 cameraFocus 1 outline 1 angle 0 color.r 255 color.g 189 color.b 33.875 color.a 255 density 15 centerX -9.20657 centerY 4.96116 x -10.1676 y 4.91116 width 1.92203 height 0.1
+Rectangle
+id 508 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 255 color.g 189 color.b 21.125 color.a 255 density 15 centerX -9.79725 centerY 4.21395 x -9.84725 y 3.42253 width 0.1 height 1.58285
+FixedJoint
+id 509 sandbox 0 editable 1 part1Index 2 part2Index 1 anchorX -9.80364 anchorY 4.97415
+RevoluteJoint
+id 512 sandbox 0 editable 1 part1Index 5 part2Index 4 anchorX -12.5517 anchorY 5.74628 enableMotor 1 isStiff 1 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 15 Speed 2.55 LowLimit 0 UpLimit 90 inputCW 3 inputCCW 0
+RevoluteJoint
+id 514 sandbox 0 editable 1 part1Index 7 part2Index 4 anchorX -10.7547 anchorY 5.74628 enableMotor 1 isStiff 0 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 15 Speed 2.55 LowLimit 0 UpLimit 90 inputCW 3 inputCCW 0
+FixedJoint
+id 516 sandbox 0 editable 1 part1Index 9 part2Index 4 anchorX -11.942 anchorY 4.99219
+RevoluteJoint
+id 518 sandbox 0 editable 1 part1Index 11 part2Index 1 anchorX -8.95578 anchorY 4.99456 enableMotor 0 isStiff 0 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 15 Speed 15 LowLimit 0 UpLimit 90 inputCW 3 inputCCW 0
+RevoluteJoint
+id 519 sandbox 0 editable 1 part1Index 11 part2Index 4 anchorX -10.5141 anchorY 4.99456 enableMotor 1 isStiff 1 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 30 Speed 0.15 LowLimit 0 UpLimit 90 inputCW 18 inputCCW 22
+RevoluteJoint
+id 521 sandbox 0 editable 1 part1Index 14 part2Index 9 anchorX -11.6556 anchorY 4.95766 enableMotor 1 isStiff 1 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 30 Speed 0.15 LowLimit 0 UpLimit 90 inputCW 18 inputCCW 22
+RevoluteJoint
+id 522 sandbox 0 editable 1 part1Index 14 part2Index 1 anchorX -10.1076 anchorY 4.96319 enableMotor 0 isStiff 0 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 15 Speed 15 LowLimit 0 UpLimit 90 inputCW 3 inputCCW 0
+Rectangle
+id 531 sandbox 0 editable 1 static 0 collide 0 cameraFocus 0 outline 1 angle 0 color.r 68.675 color.g 164.775 color.b 255 color.a 218.025 density 15 centerX -11.3063 centerY 4.08142 x -11.5794 y 3.51412 width 0.54629 height 1.1346
+FixedJoint
+id 532 sandbox 0 editable 1 part1Index 25 part2Index 9 anchorX -11.4814 anchorY 4.31254
+Rectangle
+id 534 sandbox 0 editable 1 static 1 collide 1 cameraFocus 0 outline 1 angle 32.4 color.r 98 color.g 78.075 color.b 58.1 color.a 255 density 15 centerX -0.411973 centerY 5.113 x -1.78505 y 4.93545 width 2.74614 height 0.355104
+Rectangle
+id 535 sandbox 0 editable 1 static 1 collide 1 cameraFocus 0 outline 1 angle 0 color.r 98 color.g 78.075 color.b 58.1 color.a 255 density 15 centerX -0.534618 centerY 4.3375 x -1.90769 y 4.15995 width 2.74614 height 0.355104
+Rectangle
+id 536 sandbox 0 editable 1 static 1 collide 1 cameraFocus 0 outline 1 angle -90 color.r 98 color.g 78.075 color.b 58.1 color.a 255 density 15 centerX 0.877663 centerY 4.74488 x -0.495413 y 4.56733 width 2.74614 height 0.355104
+Rectangle
+id 537 sandbox 0 editable 1 static 1 collide 1 cameraFocus 0 outline 1 angle -90 color.r 98 color.g 78.075 color.b 58.1 color.a 255 density 15 centerX 1.41003 centerY 4.74488 x 0.0369512 y 4.56733 width 2.74614 height 0.355104
+FixedJoint
+id 530 sandbox 0 editable 1 part1Index 20 part2Index 18 anchorX -5.55078 anchorY 5.95508
+FixedJoint
+id 529 sandbox 0 editable 1 part1Index 20 part2Index 17 anchorX -5.55078 anchorY 5.69297
+FixedJoint
+id 528 sandbox 0 editable 1 part1Index 19 part2Index 18 anchorX -6.32721 anchorY 5.97981
+FixedJoint
+id 527 sandbox 0 editable 1 part1Index 19 part2Index 17 anchorX -6.31732 anchorY 5.69792
+Rectangle
+id 526 sandbox 0 editable 1 static 0 collide 0 cameraFocus 0 outline 0 angle 0 color.r 151.55 color.g 163.5 color.b 155 color.a 255 density 15 centerX -5.55023 centerY 5.82403 x -5.60023 y 5.63857 width 0.1 height 0.370907
+Rectangle
+id 525 sandbox 0 editable 1 static 0 collide 0 cameraFocus 0 outline 0 angle 0 color.r 174.5 color.g 172.425 color.b 155 color.a 255 density 15 centerX -6.33161 centerY 5.82897 x -6.38161 y 5.64352 width 0.1 height 0.370907
+Rectangle
+id 524 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 0 angle 0 color.r 165.575 color.g 172.425 color.b 155 color.a 255 density 15 centerX -5.88206 centerY 5.97146 x -6.73894 y 5.92146 width 1.71376 height 0.1
+Rectangle
+id 523 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 0 angle 0 color.r 170.675 color.g 152.025 color.b 149.9 color.a 255 density 15 centerX -5.89195 centerY 5.69946 x -6.74883 y 5.64946 width 1.71376 height 0.1
+Rectangle
+id 506 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 98 color.g 189 color.b 255 color.a 255 density 15 centerX -5.8706 centerY 5.00787 x -6.4506 y 4.49787 width 1.16 height 1.02
+Rectangle
+id 510 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 255 color.g 175.95 color.b 44.075 color.a 255 density 15 centerX -11.6692 centerY 5.32912 x -12.8886 y 4.91197 width 2.43876 height 0.834313
+Circle
+id 513 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 54.65 color.g 62.775 color.b 67.025 color.a 255 density 15 centerX -10.7547 centerY 5.74628 radius 0.284309
+Circle
+id 511 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 85.425 color.g 44.625 color.b 47.175 color.a 255 density 15 centerX -12.5517 centerY 5.74628 radius 0.284309
+Rectangle
+id 517 sandbox 0 editable 1 static 0 collide 0 cameraFocus 0 outline 1 angle 0 color.r 255 color.g 176.25 color.b 0 color.a 255 density 15 centerX -9.72376 centerY 5.00728 x -10.5663 y 4.95728 width 1.68508 height 0.1
+ChallengeBox
+id 633 static 1 outline 1 angle 0 color.a 100 centerX -0.656035 centerY 3.12178 x -1.87132 y 2.07807 width 2.43057 height 2.08743 partId 506 partIndex 0 keepIn 1 strict 1 toWin 1 memory 0

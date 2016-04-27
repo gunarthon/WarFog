@@ -1,0 +1,5 @@
+DES_version_1.0.0.0
+Rectangle
+id 561 sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 98 color.g 189 color.b 155 color.a 255 density 15 centerX -2.52 centerY 3.17 x -3.1 y 2.66 width 1.16 height 1.02
+ChallengeBox
+id 591 static 1 outline 1 angle 0 color.r 178 color.g 0 color.b 255 color.a 100 centerX 1.07 centerY 1 x 0.08 y 0.28 width 1.98 height 1.44 partId 561 keepIn 1 win 0 loose 0

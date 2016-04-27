@@ -1,0 +1,4 @@
+Load=[Image]
+[Splash/Image1.png]
+[Splash/lucidezLogo.png]
+[Splash/Image2.png]

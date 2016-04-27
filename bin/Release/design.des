@@ -1,0 +1,7 @@
+DES_version_1.0.0.0
+Rectangle
+sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 98 color.g 189 color.b 155 color.a 255 density 15 centerX -30.9384 centerY 0.494211 x -34.1135 y -0.486341 width 6.35024 height 1.9611
+Circle
+sandbox 0 editable 1 static 0 collide 1 cameraFocus 0 outline 1 angle 0 color.r 98 color.g 189 color.b 155 color.a 255 density 15 centerX -28.2302 centerY 0.63429 radius 2.71462
+RevoluteJoint
+sandbox 0 editable 1 part1Index 1 part2Index 0 anchorX -28.2302 anchorY 0.63429 enableMotor 1 isStiff 0 autoCW 0 autoCCW 0 hasLowLimit 0 hasUpLimit 0 Strength 15 Speed 15 LowLimit 0 UpLimit 90 inputCW 3 inputCCW 0

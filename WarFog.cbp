@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Gambearra" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Gambearra" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../WarFog" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-DSFML_STATIC" />
+					<Add option="-DDEBUG" />
+					<Add directory="../SFML-2.3.2/include" />
+					<Add directory="include" />
+					<Add directory="../WarFog" />
+					<Add directory="New folder" />
+					<Add directory="Parts" />
+					<Add directory="Game" />
+					<Add directory="Part" />
+				</Compiler>
+				<Linker>
+					<Add option="-static" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+					<Add library="sfml-audio-d" />
+					<Add library="sfml-main-d" />
+					<Add library="sfml-network-d" />
+					<Add directory="../SFML-2.3.2/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Gambearra" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Release" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="../SFML-2.3.2/include" />
+					<Add directory="include" />
+					<Add directory="../WarFog" />
+					<Add directory="New folder" />
+					<Add directory="Parts" />
+					<Add directory="Game" />
+					<Add directory="Part" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+					<Add library="sfml-audio-d" />
+					<Add library="sfml-main-d" />
+					<Add library="sfml-network-d" />
+					<Add directory="../SFML-2.3.2/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics-d" />
+			<Add library="sfml-window-d" />
+			<Add library="sfml-system-d" />
+			<Add library="sfml-audio-d" />
+			<Add library="sfml-main-d" />
+			<Add library="sfml-network-d" />
+		</Linker>
+		<Unit filename="Box2D/Box2D.h" />
+		<Unit filename="Box2D/Collision/Shapes/b2ChainShape.cpp" />
+		<Unit filename="Box2D/Collision/Shapes/b2ChainShape.h" />
+		<Unit filename="Box2D/Collision/Shapes/b2CircleShape.cpp" />
+		<Unit filename="Box2D/Collision/Shapes/b2CircleShape.h" />
+		<Unit filename="Box2D/Collision/Shapes/b2EdgeShape.cpp" />
+		<Unit filename="Box2D/Collision/Shapes/b2EdgeShape.h" />
+		<Unit filename="Box2D/Collision/Shapes/b2PolygonShape.cpp" />
+		<Unit filename="Box2D/Collision/Shapes/b2PolygonShape.h" />
+		<Unit filename="Box2D/Collision/Shapes/b2Shape.h" />
+		<Unit filename="Box2D/Collision/b2BroadPhase.cpp" />
+		<Unit filename="Box2D/Collision/b2BroadPhase.h" />
+		<Unit filename="Box2D/Collision/b2CollideCircle.cpp" />
+		<Unit filename="Box2D/Collision/b2CollideEdge.cpp" />
+		<Unit filename="Box2D/Collision/b2CollidePolygon.cpp" />
+		<Unit filename="Box2D/Collision/b2Collision.cpp" />
+		<Unit filename="Box2D/Collision/b2Collision.h" />
+		<Unit filename="Box2D/Collision/b2Distance.cpp" />
+		<Unit filename="Box2D/Collision/b2Distance.h" />
+		<Unit filename="Box2D/Collision/b2DynamicTree.cpp" />
+		<Unit filename="Box2D/Collision/b2DynamicTree.h" />
+		<Unit filename="Box2D/Collision/b2TimeOfImpact.cpp" />
+		<Unit filename="Box2D/Collision/b2TimeOfImpact.h" />
+		<Unit filename="Box2D/Common/b2BlockAllocator.cpp" />
+		<Unit filename="Box2D/Common/b2BlockAllocator.h" />
+		<Unit filename="Box2D/Common/b2Draw.cpp" />
+		<Unit filename="Box2D/Common/b2Draw.h" />
+		<Unit filename="Box2D/Common/b2GrowableStack.h" />
+		<Unit filename="Box2D/Common/b2Math.cpp" />
+		<Unit filename="Box2D/Common/b2Math.h" />
+		<Unit filename="Box2D/Common/b2Settings.cpp" />
+		<Unit filename="Box2D/Common/b2Settings.h" />
+		<Unit filename="Box2D/Common/b2StackAllocator.cpp" />
+		<Unit filename="Box2D/Common/b2StackAllocator.h" />
+		<Unit filename="Box2D/Common/b2Timer.cpp" />
+		<Unit filename="Box2D/Common/b2Timer.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2CircleContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2CircleContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2Contact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2Contact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ContactSolver.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2ContactSolver.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2PolygonContact.cpp" />
+		<Unit filename="Box2D/Dynamics/Contacts/b2PolygonContact.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2DistanceJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2DistanceJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2FrictionJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2FrictionJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2GearJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2GearJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2Joint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2Joint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2MotorJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2MotorJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2MouseJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2MouseJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2PrismaticJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2PrismaticJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2PulleyJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2PulleyJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2RevoluteJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2RevoluteJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2RopeJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2RopeJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2WeldJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2WeldJoint.h" />
+		<Unit filename="Box2D/Dynamics/Joints/b2WheelJoint.cpp" />
+		<Unit filename="Box2D/Dynamics/Joints/b2WheelJoint.h" />
+		<Unit filename="Box2D/Dynamics/b2Body.cpp" />
+		<Unit filename="Box2D/Dynamics/b2Body.h" />
+		<Unit filename="Box2D/Dynamics/b2ContactManager.cpp" />
+		<Unit filename="Box2D/Dynamics/b2ContactManager.h" />
+		<Unit filename="Box2D/Dynamics/b2Fixture.cpp" />
+		<Unit filename="Box2D/Dynamics/b2Fixture.h" />
+		<Unit filename="Box2D/Dynamics/b2Island.cpp" />
+		<Unit filename="Box2D/Dynamics/b2Island.h" />
+		<Unit filename="Box2D/Dynamics/b2TimeStep.h" />
+		<Unit filename="Box2D/Dynamics/b2World.cpp" />
+		<Unit filename="Box2D/Dynamics/b2World.h" />
+		<Unit filename="Box2D/Dynamics/b2WorldCallbacks.cpp" />
+		<Unit filename="Box2D/Dynamics/b2WorldCallbacks.h" />
+		<Unit filename="Box2D/Rope/b2Rope.cpp" />
+		<Unit filename="Box2D/Rope/b2Rope.h" />
+		<Unit filename="Game/Camera.cpp" />
+		<Unit filename="Game/Camera.h" />
+		<Unit filename="Game/Challenge.cpp" />
+		<Unit filename="Game/Challenge.h" />
+		<Unit filename="Game/Controller.cpp" />
+		<Unit filename="Game/Controller.h" />
+		<Unit filename="Game/ControllerGame.cpp" />
+		<Unit filename="Game/ControllerGame.h" />
+		<Unit filename="Game/Draw.cpp" />
+		<Unit filename="Game/Draw.h" />
+		<Unit filename="Game/Proprieties.cpp" />
+		<Unit filename="Game/Proprieties.h" />
+		<Unit filename="Game/Propriety.cpp" />
+		<Unit filename="Game/Propriety.h" />
+		<Unit filename="Parts/Circle.cpp" />
+		<Unit filename="Parts/Circle.h" />
+		<Unit filename="Parts/FixedJoint.cpp" />
+		<Unit filename="Parts/FixedJoint.h" />
+		<Unit filename="Parts/JointPart.cpp" />
+		<Unit filename="Parts/JointPart.h" />
+		<Unit filename="Parts/Part.cpp" />
+		<Unit filename="Parts/Part.h" />
+		<Unit filename="Parts/PartList.cpp" />
+		<Unit filename="Parts/PartList.h" />
+		<Unit filename="Parts/Rectangle.cpp" />
+		<Unit filename="Parts/Rectangle.h" />
+		<Unit filename="Parts/RevoluteJoint.cpp" />
+		<Unit filename="Parts/RevoluteJoint.h" />
+		<Unit filename="Parts/ShapePart.cpp" />
+		<Unit filename="Parts/ShapePart.h" />
+		<Unit filename="Parts/Thruster.cpp" />
+		<Unit filename="Parts/Thruster.h" />
+		<Unit filename="include/ChallengeBox.h" />
+		<Unit filename="include/Color.h" />
+		<Unit filename="include/DeveloperGUI.h" />
+		<Unit filename="include/FileManager.h" />
+		<Unit filename="include/GUI.h" />
+		<Unit filename="include/Input.h" />
+		<Unit filename="include/InputManager.h" />
+		<Unit filename="include/InterfaceManager.h" />
+		<Unit filename="include/LoadGUI.h" />
+		<Unit filename="include/MainMenuGUI.h" />
+		<Unit filename="include/PartsGUI.h" />
+		<Unit filename="include/SaveGUI.h" />
+		<Unit filename="include/ToolsGUI.h" />
+		<Unit filename="include/Utils.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/ChallengeBox.cpp" />
+		<Unit filename="src/Color.cpp" />
+		<Unit filename="src/DeveloperGUI.cpp" />
+		<Unit filename="src/FileManager.cpp" />
+		<Unit filename="src/GUI.cpp" />
+		<Unit filename="src/Input.cpp" />
+		<Unit filename="src/InputManager.cpp" />
+		<Unit filename="src/InterfaceManager.cpp" />
+		<Unit filename="src/LoadGUI.cpp" />
+		<Unit filename="src/MainMenuGUI.cpp" />
+		<Unit filename="src/PartsGUI.cpp" />
+		<Unit filename="src/SaveGUI.cpp" />
+		<Unit filename="src/ToolsGUI.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
