@@ -5,6 +5,8 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
     draw = new Draw(Window);
     camera = new Camera(&Window, &allParts);
     camera->SetScale(50);
+    cameraPos = camera->GetPos();
+    cameraScale = camera->GetScale();
     m_world = NULL;
 
     paused = false;
@@ -37,6 +39,10 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
                                                 [&](String s) {return draw->ChangeResolution(s); });
     title = "Developer GUI";
     devInterface = new DeveloperGUI(title, &devProprieties);
+    title = "FINISHED";
+    challengeEndInterface = new ChallengeEndGUI(title, [this]() {return this->RetryButton(); },
+                                                [this]() {return this->ChangeFocus(loadInterface);},
+                                                [this]() {return this->ChangeFocus(mainMenuInterface);});
 
     interface.list.push_back(proprietiesInterface);
     interface.list.push_back(saveInterface);
@@ -44,15 +50,10 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
     interface.list.push_back(mainMenuInterface);
     interface.list.push_back(toolsInterface);
     interface.list.push_back(devInterface);
+    interface.list.push_back(challengeEndInterface);
 
-    interface.Show(toolsInterface);
-    #ifdef DEBUG
-        interface.Show(devInterface);
-    #endif // DEBUG
     interface.Show(mainMenuInterface);
 
-    ChangeAction(DEFAULT_ACTION);
-    actionStep = 0;
 
     Rectangle *p = new Rectangle(-250, 6.25, 500, 12.5, false);
 					p->isStatic = true;
@@ -122,7 +123,8 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
 					p->color = Color(81, 122, 35, 50);
 
     allParts.Add(p);
-    LoadDesign("tutorial0");
+    //LoadDesign("tutorial0");
+    StopButton();
 }
 
 ControllerGame::~ControllerGame()
@@ -181,9 +183,9 @@ void ControllerGame::DrawAll()
         draw->Clear();
         draw->DrawWorld(camera, &allParts, m_world, !simStarted, true, simStarted ? false : showJoints, showOutlines, NULL);
             //m_world->DrawDebugData();
+        draw->DrawInterface(&interface);
         if(!simStarted)
         {
-            draw->DrawInterface(&interface);
         }
     }
 }
@@ -239,6 +241,8 @@ void ControllerGame::PlayButton()
     cameraScale = camera->GetScale();
     camera->SetFollow(false);
 
+    interface.Hide();
+
     for(PartList::RIt i = allParts.list.rbegin(); i != allParts.list.rend(); ++i)
     {
         if(i->second->isCameraFocus)
@@ -269,6 +273,18 @@ void ControllerGame::StopButton()
 
     for(PartList::It i = allParts.list.begin(); i != allParts.list.end(); i++)
         i->second->UnInit(m_world);
+
+
+    interface.Show(toolsInterface);
+    #ifdef DEBUG
+        interface.Show(devInterface);
+    #endif // DEBUG
+}
+
+void ControllerGame::RetryButton()
+{
+    StopButton();
+    PlayButton();
 }
 
 b2Vec2 ControllerGame::GetGravity()
@@ -560,6 +576,14 @@ bool ControllerGame::KeyPress(sf::Keyboard::Key key)
     else if(key == sf::Keyboard::Up || key == sf::Keyboard::Down || key == sf::Keyboard::Left ||key == sf::Keyboard::Right)
     {
         //camera movement
+    }
+    else if(key == sf::Keyboard::Add)
+    {
+        interface.Show(challengeEndInterface);
+    }
+    else if(key == sf::Keyboard::Subtract)
+    {
+        interface.Show(challengeEndInterface);
     }
 
     if(!simStarted)

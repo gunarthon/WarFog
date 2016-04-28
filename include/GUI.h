@@ -15,7 +15,8 @@ enum Align
     ALIGN_UP_LEFT,
     ALIGN_UP_RIGHT,
     ALIGN_DOWN_RIGHT,
-    ALIGN_DOWN_LEFT
+    ALIGN_DOWN_LEFT,
+    ALIGN_DOWN_CENTER
 };
 class GUI
 {

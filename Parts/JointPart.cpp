@@ -161,6 +161,11 @@ String JointPart::ToString()
 
     part1Index = allParts->IndexOf(part1);
     part2Index = allParts->IndexOf(part2);
+    if(part1 && (part1Index == -1))
+        return "";
+    if(part2 && (part2Index == -1))
+        return "";
+
 
     return Part::ToString();
 }

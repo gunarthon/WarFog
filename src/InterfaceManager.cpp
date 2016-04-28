@@ -131,3 +131,10 @@ void InterfaceManager::Show(GUI *gui)
     gui->Show();
     ChangeFocus(gui);
 }
+
+void InterfaceManager::Hide(GUI *gui)
+{
+    for(unsigned i = 0; i < list.size(); i++)
+        if(!gui || gui == list[i])
+            list[i]->Hide();
+}

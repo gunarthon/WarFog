@@ -86,6 +86,8 @@ void GUI::Draw(sf::RenderWindow *window, sf::Font *font)
         pos = sf::Vector2f(view.getSize().x - rectangle.getLocalBounds().width - offset.x, view.getSize().y - rectangle.getLocalBounds().height - offset.y);
     else if(align == ALIGN_DOWN_LEFT)
         pos = sf::Vector2f(offset.x, view.getSize().y - rectangle.getLocalBounds().height - offset.y);
+    else if(align == ALIGN_DOWN_CENTER)
+        pos = sf::Vector2f(view.getSize().x/2 - rectangle.getLocalBounds().width/2 + offset.x, view.getSize().y - rectangle.getLocalBounds().height - offset.y);
 
     rectangle.setPosition(pos);
     window->draw(rectangle);

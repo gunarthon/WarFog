@@ -22,6 +22,7 @@
 #include "MainMenuGUI.h"
 #include "ToolsGUI.h"
 #include "DeveloperGUI.h"
+#include "ChallengeEndGUI.h"
 #include "ChallengeBox.h"
 
 typedef std::vector<ActionId> ActionList;
@@ -39,6 +40,7 @@ class ControllerGame : public Controller
         void AddSyncPoint();
         void PlayButton();
         void StopButton();
+        void RetryButton();
 
         bool KeyPress(sf::Keyboard::Key key);
         bool MouseDown(sf::Mouse::Button button, Num x, Num y);
@@ -75,6 +77,7 @@ class ControllerGame : public Controller
         GUI *mainMenuInterface;
         GUI *toolsInterface;
         GUI *devInterface;
+        GUI *challengeEndInterface;
         Proprieties devProprieties;
 
 

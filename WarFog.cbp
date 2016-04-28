@@ -225,6 +225,7 @@
 		<Unit filename="include/Utils.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ChallengeBox.cpp" />
+		<Unit filename="src/ChallengeEndGUI.cpp" />
 		<Unit filename="src/Color.cpp" />
 		<Unit filename="src/DeveloperGUI.cpp" />
 		<Unit filename="src/FileManager.cpp" />

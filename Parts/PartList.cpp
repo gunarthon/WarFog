@@ -81,6 +81,10 @@ void PartList::SafeDelete(Part* p)
 int PartList::IndexOf(Part *part)
 {
     int index = 0;
+    if(!part)
+        return -1;
+    if(!InsideGroup(part->id, indexOfGroup))
+        return -1;
     /*if(indexOfGroup)
     {
         for(unsigned i = 0; i < indexOfGroup->size(); i++)
@@ -288,10 +292,13 @@ void PartList::Copy(Group *group)
                 std::istream_iterator<String> end;
                 std::vector<String> vstrings(begin, end);
                 //TODO: apagando o tipo no comeco para dar numero par de content
-                vstrings.erase(vstrings.begin());
+                if(vstrings.size())
+                {
+                    vstrings.erase(vstrings.begin());
 
-                clipboard.push_back(type);
-                clipboard.push_back(vstrings);
+                    clipboard.push_back(type);
+                    clipboard.push_back(vstrings);
+                }
             }
     }
     indexOfGroup = NULL;

@@ -19,6 +19,7 @@ class InterfaceManager
         virtual void Draw(sf::RenderWindow *window, sf::Font *font);
         virtual void ChangeFocus(GUI *focus = NULL);
         virtual void Show(GUI *gui);
+        virtual void Hide(GUI *gui = NULL);
 
         virtual bool MouseDown(sf::Mouse::Button button, sf::Vector2f mouse);
         virtual bool MouseUp(sf::Mouse::Button button, sf::Vector2f mouse);
