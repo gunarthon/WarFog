@@ -123,7 +123,7 @@ ControllerGame::ControllerGame(sf::RenderWindow &Window)
 					p->color = Color(81, 122, 35, 50);
 
     allParts.Add(p);
-    //LoadDesign("tutorial0");
+    LoadDesign("tutorial0");
     StopButton();
 }
 
@@ -618,6 +618,14 @@ bool ControllerGame::KeyPress(sf::Keyboard::Key key)
         else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
         {
             ChangeAction(NEW_CHALLENGE_BOX);
+        }
+        else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
+        {
+            ChangeAction(NEW_BUFFER_BOX);
+        }
+        else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
+        {
+            ChangeAction(NEW_END_BOX);
         }
         else if(key == sf::Keyboard::Delete)
         {

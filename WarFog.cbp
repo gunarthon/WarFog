@@ -25,6 +25,7 @@
 					<Add directory="Parts" />
 					<Add directory="Game" />
 					<Add directory="Part" />
+					<Add directory="Logic" />
 				</Compiler>
 				<Linker>
 					<Add option="-static" />
@@ -57,6 +58,7 @@
 					<Add directory="Parts" />
 					<Add directory="Game" />
 					<Add directory="Part" />
+					<Add directory="Logic" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -191,6 +193,8 @@
 		<Unit filename="Game/Proprieties.h" />
 		<Unit filename="Game/Propriety.cpp" />
 		<Unit filename="Game/Propriety.h" />
+		<Unit filename="Logic/LogicBox.cpp" />
+		<Unit filename="Logic/LogicBox.h" />
 		<Unit filename="Parts/Circle.cpp" />
 		<Unit filename="Parts/Circle.h" />
 		<Unit filename="Parts/FixedJoint.cpp" />
@@ -212,6 +216,7 @@
 		<Unit filename="include/ChallengeBox.h" />
 		<Unit filename="include/Color.h" />
 		<Unit filename="include/DeveloperGUI.h" />
+		<Unit filename="include/EndBox.h" />
 		<Unit filename="include/FileManager.h" />
 		<Unit filename="include/GUI.h" />
 		<Unit filename="include/Input.h" />
@@ -228,6 +233,7 @@
 		<Unit filename="src/ChallengeEndGUI.cpp" />
 		<Unit filename="src/Color.cpp" />
 		<Unit filename="src/DeveloperGUI.cpp" />
+		<Unit filename="src/EndBox.cpp" />
 		<Unit filename="src/FileManager.cpp" />
 		<Unit filename="src/GUI.cpp" />
 		<Unit filename="src/Input.cpp" />

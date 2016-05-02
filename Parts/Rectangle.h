@@ -14,7 +14,7 @@ class Rectangle : public ShapePart
         bool InsideShape(sf::Vector2f val, Num scale = 1, bool shapeOnly = false);
         void Move(sf::Vector2f val);
         ShapePart *MakeCopy();
-        void Init(b2World *world, b2Body *body = NULL);
+        virtual void Init(b2World *world, b2Body *body = NULL);
         bool IntersectsBox(Num boxX, Num boxY, Num boxW, Num boxH);
         //VectorList *GetVerticesForOutline(Num thickness);
         void PrepareForResizing();

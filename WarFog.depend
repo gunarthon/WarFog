@@ -1499,7 +1499,7 @@
 	"Entity.h"
 	<vector>
 
-1461776252 d:\dropbox\shared na\sfml\warfog\include\utils.h
+1462118339 d:\dropbox\shared na\sfml\warfog\include\utils.h
 	<SFML/Graphics.hpp>
 	"Box2D/Box2D.h"
 	<math.h>
@@ -2093,10 +2093,10 @@
 	"Rectangle.h"
 	"Camera.h"
 
-1461749063 d:\dropbox\shared na\sfml\warfog\parts\rectangle.h
+1462107362 d:\dropbox\shared na\sfml\warfog\parts\rectangle.h
 	"ShapePart.h"
 
-1461789549 source:d:\dropbox\shared na\sfml\warfog\game\draw.cpp
+1461846024 source:d:\dropbox\shared na\sfml\warfog\game\draw.cpp
 	"Draw.h"
 
 1461679843 d:\dropbox\shared na\sfml\warfog\game\draw.h
@@ -2123,7 +2123,7 @@
 	"GUI.h"
 	"InterfaceManager.h"
 
-1461845072 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
+1462118339 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
 	"ControllerGame.h"
 
 1461843755 d:\dropbox\shared na\sfml\warfog\game\controllergame.h
@@ -2886,4 +2886,10 @@
 
 1461844123 source:d:\dropbox\shared na\sfml\warfog\src\challengeendgui.cpp
 	"ChallengeEndGUI.h"
+
+1462118339 source:d:\dropbox\shared na\sfml\warfog\logic\logicbox.cpp
+	"LogicBox.h"
+
+1462108921 d:\dropbox\shared na\sfml\warfog\logic\logicbox.h
+	"Rectangle.h"
 
