@@ -39,11 +39,18 @@ void LogicBox::UnInit(b2World *world)
 void LogicBox::Update(b2World *world, InputManager *input)
 {
     Rectangle::Update(world, input);
+    unsigned cableIt = 0;
     for(unsigned i = 0;i < inputs.size(); i++)
     {
-        if(i < m_joints.size())
+        while(cableIt < m_joints.size())
         {
-
+            if(m_joints[cableIt]->type == "Cable")
+                break;
+            cableIt++;
+        }
+        if(cableIt < m_joints.size())
+        {
+            inputs[i] = m_joints[cableIt]->GetOtherPart(this)->GetOutput(0);
         }
         else
             inputs[i] = false;

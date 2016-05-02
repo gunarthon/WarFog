@@ -40,6 +40,7 @@ class ShapePart : public Part
 		virtual void GetVertices(VectorList *verts);
 		virtual bool equals(ShapePart *other);
 		bool NumbersEqual(Num n1, Num n2);
+		virtual bool GetOutput(int index);
 		virtual void Draw(sf::RenderWindow *window, Camera *camera, bool drawStatic,
                     bool showJoints, bool showOutlines, sf::Texture *texture, sf::Shader *shader) = 0;
 		//virtual String ToString();

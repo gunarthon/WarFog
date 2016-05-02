@@ -37,7 +37,6 @@ class Part
 		virtual String ToString();
 		virtual bool Load(StringList content);
         virtual bool InsideShape(sf::Vector2f val, Num scale = 1, bool shapeOnly = false) = 0;
-		virtual Part *MakeCopy() = 0;
 		virtual void Move(sf::Vector2f val) = 0;
         virtual void RotateAround(sf::Vector2f center, Num angle) = 0;
 		virtual void KeyInput(sf::Keyboard::Key key, bool up, bool replay) = 0;

@@ -213,6 +213,7 @@
 		<Unit filename="Parts/ShapePart.h" />
 		<Unit filename="Parts/Thruster.cpp" />
 		<Unit filename="Parts/Thruster.h" />
+		<Unit filename="include/Cable.h" />
 		<Unit filename="include/ChallengeBox.h" />
 		<Unit filename="include/Color.h" />
 		<Unit filename="include/DeveloperGUI.h" />
@@ -229,6 +230,7 @@
 		<Unit filename="include/ToolsGUI.h" />
 		<Unit filename="include/Utils.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Cable.cpp" />
 		<Unit filename="src/ChallengeBox.cpp" />
 		<Unit filename="src/ChallengeEndGUI.cpp" />
 		<Unit filename="src/Color.cpp" />

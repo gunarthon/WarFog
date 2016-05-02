@@ -166,6 +166,11 @@ void ShapePart::Update(b2World *world, InputManager *input)
     // do nothing
 }
 
+bool ShapePart::GetOutput(int index)
+{
+    return false;
+}
+
 void ShapePart::KeyInput(sf::Keyboard::Key key, bool up, bool replay)
 {
     // do nothing

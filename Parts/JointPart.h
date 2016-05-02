@@ -20,8 +20,8 @@ class JointPart : public Part
         virtual void Init(b2World *world, b2Body *body = NULL);
         void UnInit(b2World *world);
         void Move(sf::Vector2f val);
+        virtual void KeyInput(sf::Keyboard::Key key, bool up, bool replay);
         void RotateAround(sf::Vector2f center, Num curAngle);
-        virtual Part *MakeCopy() = 0;
         virtual void GetAttachedParts(Group *group, bool recursive = true);
         virtual void Disconnect();
         virtual void Connect(ShapePart *p1, ShapePart *p2 = NULL);

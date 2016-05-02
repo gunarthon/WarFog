@@ -474,6 +474,81 @@ bool ControllerGame::MouseDown(sf::Mouse::Button button, Num x, Num y)
             }
         }
     }
+    else if(currAction == NEW_END_BOX)
+    {
+        if(actionStep == 0)
+        {
+            UpdateTempParts();
+            actionStep++;
+        }
+        else if(actionStep == 1)
+        {
+            if(mouseClicks.size() >= 2)
+            {
+                EndBox *box = new EndBox([this](bool win) {return this->ShowEnd(win);},
+                mouseClicks[0], mouseClicks[1] - mouseClicks[0]);
+
+                allParts.selected.clear();
+                allParts.Add(box, &allParts.selected);
+                ChangeFocus(proprietiesInterface);
+
+                ChangeAction(DEFAULT_ACTION);
+            }
+            else
+            {
+                mouseClicks.pop_back();
+                actionStep = 1;
+            }
+        }
+    }
+    else if(currAction == NEW_CABLE)
+    {
+        if(actionStep == 0)
+        {
+            if(FindCandidateParts(FindSnapPoint(mouseClicks[0]), true) < 1)
+                mouseClicks.clear();
+            else
+                actionStep++;
+            UpdateTempParts();
+        }
+        else if(actionStep == 1)
+        {
+            if(mouseClicks.size() >= 2)
+            {
+                ShapePart *part1 = NULL;
+                ShapePart *part2 = NULL;
+                bool valid0 = FindCandidateParts(FindSnapPoint(mouseClicks[0]), true) >= 1;
+                if(valid0)
+                    part1 = (ShapePart*) allParts.At(allParts.candidate[0]);
+                bool valid1 = FindCandidateParts(FindSnapPoint(mouseClicks[1]), true) >= 1;
+                if(valid1)
+                    part2 = (ShapePart*) allParts.At(allParts.candidate[0]);
+                if(!valid0)
+                {
+                    mouseClicks.clear();
+                    actionStep = 0;
+                }
+                else if(!valid1)
+                {
+                    mouseClicks.pop_back();
+                    actionStep = 1;
+                }
+                else
+                {
+                    allParts.Add(new Cable(part1, part2, camera->ToWorldPos(sf::Vector2f(mouseX, mouseY)), 0, 0, true),
+                        &allParts.selected);
+                }
+                ChangeFocus(proprietiesInterface);
+
+                ChangeAction(DEFAULT_ACTION);
+            }
+            else
+            {
+                mouseClicks.pop_back();
+                actionStep = 1;
+            }
+        }
+    }
     return false;
 }
 
@@ -588,7 +663,43 @@ bool ControllerGame::KeyPress(sf::Keyboard::Key key)
 
     if(!simStarted)
     {
-        if(key == sf::Keyboard::Num0 || key == sf::Keyboard::Numpad0)
+        if(input->KeyDown(sf::Keyboard::LAlt))
+        {
+
+            if(key == sf::Keyboard::Num1 || key == sf::Keyboard::Numpad1)
+            {
+                ChangeAction(NEW_CHALLENGE_BOX);
+            }
+            else if(key == sf::Keyboard::Num2 || key == sf::Keyboard::Numpad2)
+            {
+                ChangeAction(NEW_CABLE);
+            }
+            else if(key == sf::Keyboard::Num3 || key == sf::Keyboard::Numpad3)
+            {
+                ChangeAction(NEW_BUFFER_BOX);
+            }
+            else if(key == sf::Keyboard::Num4 || key == sf::Keyboard::Numpad4)
+            {
+                ChangeAction(NEW_NOT_BOX);
+            }
+            else if(key == sf::Keyboard::Num5 || key == sf::Keyboard::Numpad5)
+            {
+                ChangeAction(NEW_AND_BOX);
+            }
+            else if(key == sf::Keyboard::Num6 || key == sf::Keyboard::Numpad6)
+            {
+                ChangeAction(NEW_OR_BOX);
+            }
+            else if(key == sf::Keyboard::Num7 || key == sf::Keyboard::Numpad7)
+            {
+                ChangeAction(NEW_XOR_BOX);
+            }
+            else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
+            {
+                ChangeAction(NEW_END_BOX);
+            }
+        }
+        else if(key == sf::Keyboard::Num0 || key == sf::Keyboard::Numpad0)
         {
             ChangeAction(BOX_SELECTING);
         }
@@ -614,18 +725,6 @@ bool ControllerGame::KeyPress(sf::Keyboard::Key key)
         else if(key == sf::Keyboard::Num6 || key == sf::Keyboard::Numpad6)
         {
             ChangeAction(NEW_THRUSTER);
-        }
-        else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
-        {
-            ChangeAction(NEW_CHALLENGE_BOX);
-        }
-        else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
-        {
-            ChangeAction(NEW_BUFFER_BOX);
-        }
-        else if(key == sf::Keyboard::Num9 || key == sf::Keyboard::Numpad9)
-        {
-            ChangeAction(NEW_END_BOX);
         }
         else if(key == sf::Keyboard::Delete)
         {
@@ -755,6 +854,29 @@ void ControllerGame::UpdateTempParts()
                     &allParts.temp);
         }
     }
+    else if(currAction == NEW_CABLE)
+    {
+        if(mouseClicks.size() == 1)
+        {
+            if(FindCandidateParts(FindSnapPoint(mouseClicks[0]), true) < 1)
+                return;
+            ShapePart *part1 = (ShapePart*) allParts.At(allParts.candidate[0]);
+            bool valid = (FindCandidateParts(FindSnapPoint(camera->ToWorldPos(sf::Vector2f(mouseX, mouseY))), true) >= 1);
+            ShapePart *part2 = valid ? (ShapePart*) allParts.At(allParts.candidate[0]) : NULL;
+
+            allParts.Add(new Cable(part1, part2, FindSnapPoint(camera->ToWorldPos(sf::Vector2f(mouseX, mouseY))), 0, 0, valid),
+                    &allParts.temp);
+        }
+    }
+    else if(currAction == NEW_END_BOX)
+    {
+        if(mouseClicks.size() == 1)
+        {
+            allParts.Add(new EndBox([this](bool win) {return this->ShowEnd(win);}, mouseClicks[0],
+                    camera->ToWorldPos(sf::Vector2f(mouseX, mouseY)) - mouseClicks[0]),
+                    &allParts.temp);
+        }
+    }
 }
 
 unsigned ControllerGame::FindCandidateParts(sf::Vector2f pos, bool shapeOnly)
@@ -851,4 +973,10 @@ void ControllerGame::ExitGame()
 void ControllerGame::ChangeFocus(GUI *gui)
 {
     interface.Show(gui);
+}
+
+void ControllerGame::ShowEnd(bool win)
+{
+    challengeEndInterface->SetWin(win);
+    ChangeFocus(challengeEndInterface);
 }

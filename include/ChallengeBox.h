@@ -11,6 +11,8 @@ class ChallengeBox : public Rectangle
         virtual ~ChallengeBox();
 
         void Update(b2World *world, InputManager *input);
+
+		virtual bool GetOutput(int index);
         String ToString();
 
         void UnInit(b2World *world);

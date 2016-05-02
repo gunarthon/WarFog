@@ -1499,7 +1499,7 @@
 	"Entity.h"
 	<vector>
 
-1462118339 d:\dropbox\shared na\sfml\warfog\include\utils.h
+1462226166 d:\dropbox\shared na\sfml\warfog\include\utils.h
 	<SFML/Graphics.hpp>
 	"Box2D/Box2D.h"
 	<math.h>
@@ -2057,22 +2057,22 @@
 	"Part.h"
 	"Camera.h"
 
-1461775645 d:\dropbox\shared na\sfml\warfog\parts\part.h
+1462227646 d:\dropbox\shared na\sfml\warfog\parts\part.h
 	"Utils.h"
 	"Proprieties.h"
 	"Color.h"
 	"PartList.h"
 	"InputManager.h"
 
-1461837474 source:d:\dropbox\shared na\sfml\warfog\parts\jointpart.cpp
+1462225112 source:d:\dropbox\shared na\sfml\warfog\parts\jointpart.cpp
 	"JointPart.h"
 	"ShapePart.h"
 
-1461775645 d:\dropbox\shared na\sfml\warfog\parts\jointpart.h
+1462227630 d:\dropbox\shared na\sfml\warfog\parts\jointpart.h
 	"Part.h"
 	"Utils.h"
 
-1461775645 d:\dropbox\shared na\sfml\warfog\parts\shapepart.h
+1462226045 d:\dropbox\shared na\sfml\warfog\parts\shapepart.h
 	"Part.h"
 	"JointPart.h"
 	"Thruster.h"
@@ -2081,7 +2081,7 @@
 1461789047 d:\dropbox\shared na\sfml\warfog\parts\thruster.h
 	"JointPart.h"
 
-1461789245 source:d:\dropbox\shared na\sfml\warfog\parts\shapepart.cpp
+1462226045 source:d:\dropbox\shared na\sfml\warfog\parts\shapepart.cpp
 	"ShapePart.h"
 
 1461789047 source:d:\dropbox\shared na\sfml\warfog\parts\thruster.cpp
@@ -2123,10 +2123,10 @@
 	"GUI.h"
 	"InterfaceManager.h"
 
-1462118339 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
+1462231612 source:d:\dropbox\shared na\sfml\warfog\game\controllergame.cpp
 	"ControllerGame.h"
 
-1461843755 d:\dropbox\shared na\sfml\warfog\game\controllergame.h
+1462227942 d:\dropbox\shared na\sfml\warfog\game\controllergame.h
 	"Draw.h"
 	"ShapePart.h"
 	"Rectangle.h"
@@ -2147,6 +2147,8 @@
 	"DeveloperGUI.h"
 	"ChallengeEndGUI.h"
 	"ChallengeBox.h"
+	"EndBox.h"
+	"Cable.h"
 
 1460647080 d:\dropbox\shared na\sfml\warfog\game\camera.h
 	"Utils.h"
@@ -2156,12 +2158,12 @@
 	"Camera.h"
 	"ShapePart.h"
 
-1461759209 source:d:\dropbox\shared na\sfml\warfog\parts\fixedjoint.cpp
+1462225112 source:d:\dropbox\shared na\sfml\warfog\parts\fixedjoint.cpp
 	"FixedJoint.h"
 	"ShapePart.h"
 	"Camera.h"
 
-1461030937 d:\dropbox\shared na\sfml\warfog\parts\fixedjoint.h
+1462225112 d:\dropbox\shared na\sfml\warfog\parts\fixedjoint.h
 	"JointPart.h"
 
 1459308879 source:c:\users\edu12_000\dropbox\shared na\sfml\warfog\box2d\collision\b2broadphase.cpp
@@ -2869,10 +2871,10 @@
 1461677341 d:\dropbox\shared na\sfml\warfog\parts\box.h
 	"Part.h"
 
-1461751675 source:d:\dropbox\shared na\sfml\warfog\src\challengebox.cpp
+1462233288 source:d:\dropbox\shared na\sfml\warfog\src\challengebox.cpp
 	"ChallengeBox.h"
 
-1461751581 d:\dropbox\shared na\sfml\warfog\include\challengebox.h
+1462233288 d:\dropbox\shared na\sfml\warfog\include\challengebox.h
 	"Rectangle.h"
 
 1461843072 d:\dropbox\shared na\sfml\warfog\include\chalengeendgui.h
@@ -2887,9 +2889,23 @@
 1461844123 source:d:\dropbox\shared na\sfml\warfog\src\challengeendgui.cpp
 	"ChallengeEndGUI.h"
 
-1462118339 source:d:\dropbox\shared na\sfml\warfog\logic\logicbox.cpp
+1462232942 source:d:\dropbox\shared na\sfml\warfog\logic\logicbox.cpp
 	"LogicBox.h"
 
 1462108921 d:\dropbox\shared na\sfml\warfog\logic\logicbox.h
 	"Rectangle.h"
+
+1462233097 source:d:\dropbox\shared na\sfml\warfog\src\cable.cpp
+	"Cable.h"
+	"ShapePart.h"
+	"Camera.h"
+
+1462225112 d:\dropbox\shared na\sfml\warfog\include\cable.h
+	"JointPart.h"
+
+1462118574 source:d:\dropbox\shared na\sfml\warfog\src\endbox.cpp
+	"EndBox.h"
+
+1462118339 d:\dropbox\shared na\sfml\warfog\include\endbox.h
+	"LogicBox.h"
 

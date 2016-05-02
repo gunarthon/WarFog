@@ -97,6 +97,11 @@ void ChallengeBox::Update(b2World *world, InputManager *input)
 
 }
 
+bool ChallengeBox::GetOutput(int index)
+{
+    return win || loose;
+}
+
 String ChallengeBox::ToString()
 {
     partIndex = allParts->IndexOf(allParts->At(partId));

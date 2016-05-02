@@ -1,15 +1,14 @@
-#ifndef FIXEDJOINT_H
-#define FIXEDJOINT_H
+#ifndef CABLE_H
+#define CABLE_H
 
 #include "JointPart.h"
 
 
-class FixedJoint : public JointPart
+class Cable : public JointPart
 {
     public:
-        FixedJoint(ShapePart *p1, ShapePart *p2, sf::Vector2f pos, bool valid = true);
-        virtual ~FixedJoint();
-        Part *MakeCopy();
+        Cable(ShapePart *p1, ShapePart *p2, sf::Vector2f pos, int index1, int index2, bool valid = true);
+        virtual ~Cable();
         void Update(b2World *world, InputManager *input);
         bool InsideShape(sf::Vector2f val, Num scale, bool shapeOnly = false);
 		void Draw(sf::RenderWindow *window, Camera *camera, bool drawStatic = true,
@@ -17,8 +16,10 @@ class FixedJoint : public JointPart
             sf::Texture *texture = NULL, sf::Shader *shader = NULL);
 
     protected:
+        Color color;
+        int index1, index2;
 
     private:
 };
 
-#endif // FIXEDJOINT_H
+#endif // CABLE_H

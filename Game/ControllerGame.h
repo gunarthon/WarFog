@@ -24,6 +24,8 @@
 #include "DeveloperGUI.h"
 #include "ChallengeEndGUI.h"
 #include "ChallengeBox.h"
+#include "EndBox.h"
+#include "Cable.h"
 
 typedef std::vector<ActionId> ActionList;
 typedef std::vector<sf::Vector2f> PositionList;
@@ -77,7 +79,7 @@ class ControllerGame : public Controller
         GUI *mainMenuInterface;
         GUI *toolsInterface;
         GUI *devInterface;
-        GUI *challengeEndInterface;
+        ChallengeEndGUI *challengeEndInterface;
         Proprieties devProprieties;
 
 
@@ -103,6 +105,7 @@ class ControllerGame : public Controller
         virtual void SaveDesign(String fileName);
         virtual void LoadDesign(String fileName);
         virtual void ExitGame();
+        virtual void ShowEnd(bool win);
     private:
 
 		void CreateWorld();

@@ -32,6 +32,7 @@ enum ActionId
     NEW_REVOLUTE_JOINT,
     NEW_PISTON,
 
+    NEW_CABLE,
     NEW_CHALLENGE_BOX,
     NEW_END_BOX,
     NEW_BUFFER_BOX,

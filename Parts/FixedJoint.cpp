@@ -14,14 +14,6 @@ FixedJoint::~FixedJoint()
     //dtor
 }
 
-void FixedJoint::Init(b2World *world, b2Body *body)
-{
-    if(isInitted)
-        return;
-
-    JointPart::Init(world);
-}
-
 Part *FixedJoint::MakeCopy()
 {
     return new FixedJoint(NULL, NULL, anchor);
@@ -39,18 +31,6 @@ bool FixedJoint::InsideShape(sf::Vector2f val, Num scale, bool shapeOnly)
     static Utils utils;
     return (utils.GetLength(anchor - val) < 0.18 * 30 / scale);
 }
-
-void FixedJoint::KeyInput(sf::Keyboard::Key key, bool up, bool replay)
-{
-    //do nothing
-}
-
-/*String FixedJoint::ToString()
-{
-    std::stringstream s;
-    s << "FixedJoint: " << JointPart::ToString();
-    return s.str();
-}*/
 
 void FixedJoint::Draw(sf::RenderWindow *window, Camera *camera, bool drawStatic,
                       bool showJoints, bool showOutlines, sf::Texture *texture, sf::Shader *shader)

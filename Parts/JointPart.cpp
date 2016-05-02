@@ -74,6 +74,12 @@ void JointPart::Move(sf::Vector2f val)
     anchor += val;
 }
 
+
+void JointPart::KeyInput(sf::Keyboard::Key key, bool up, bool replay)
+{
+    //do nothing
+}
+
 void JointPart::RotateAround(sf::Vector2f center, Num curAngle)
 {
     Move(-center);
